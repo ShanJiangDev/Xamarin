@@ -49,6 +49,7 @@ namespace ActivityLifecycles
 
 		protected override void OnStart()
 		{
+			// From OnCreate() or OnRestart()
 			base.OnStart();
 			Console.WriteLine("In OnStart() now");
 		}
@@ -56,6 +57,7 @@ namespace ActivityLifecycles
 		protected override void OnResume()
 		{
 			// User return to the activity from onStart()
+			// Ready to interact with user
 			base.OnResume();
 			Console.WriteLine("In OnResume() now");
 		}
