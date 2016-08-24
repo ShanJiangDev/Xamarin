@@ -1,1 +1,31 @@
-﻿<Properties StartupItem="HelloWorld/HelloWorld.csproj" />
+﻿<Properties StartupItem="HelloWorld/HelloWorld.csproj">
+  <MonoDevelop.Ide.ItemProperties.HelloWorld AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HelloWorld/MainActivity.cs">
+    <Files>
+      <File FileName="HelloWorld/MainActivity.cs" Line="28" Column="1" />
+      <File FileName="HelloWorld/Properties/AndroidManifest.xml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HelloWorld" expanded="True">
+            <Node name="HelloWorld" expanded="True">
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True" />
+              </Node>
+              <Node name="MainActivity.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../Customer-mobile-app-master-5333c2af5d7eb44174f0cbd4ecb2e171ad3c6331/LindexCustomerApp.Core/Repository/ProductsRepository.cs" line="106" offsetX="1036" offsetY="1575" expression="response.RequestMessage.RequestUri" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>
