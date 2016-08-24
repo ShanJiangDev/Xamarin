@@ -8,4 +8,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnMakeCalls" />
+    <Button
+        android:text="View Web Page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnViewWebPage" />
+    <Button
+        android:text="View Maps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnViewMaps" />
+    <Button
+        android:text="Google Play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGooglePlay" />
+    <Button
+        android:text="Send Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSendEmail" />
+    <Button
+        android:text="Send Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSendText" />
+    <Button
+        android:text="Send Binary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSendBinary" />
 </LinearLayout>
