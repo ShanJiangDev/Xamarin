@@ -7,8 +7,6 @@ namespace HelloWorld
 	[Activity(Label = "HelloWorld", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
-
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -16,11 +14,12 @@ namespace HelloWorld
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button>(Resource.Id.myButton);
+			EditText txtName = FindViewById<EditText>(Resource.Id.txtName);
 
-			button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+			Button btn = FindViewById<Button>(Resource.Id.btnOK);
+			btn.Click += delegate {
+				Toast.MakeText(this, "Welcome to Xamarin, " + txtName.Text, ToastLength.Long).Show();
+			};
 		}
 	}
 }
