@@ -13,6 +13,8 @@ namespace UsingBroadcasts
 	// https://developer.android.com/reference/android/content/BroadcastReceiver.html
 	// Base class for code that will receive intents sent by sendBroadcast().
 
+
+	// Receive broadcast inside the same class
 	public class MyBroadcastReceiver : BroadcastReceiver 
 	{
 		public override void OnReceive(Context context, Intent intent)
@@ -32,7 +34,7 @@ namespace UsingBroadcasts
 
 	public class MainActivity : Activity
 	{
-
+		// State Properities:
 		MyBroadcastReceiver myReceiver;
 		IntentFilter intentFilter;
 
@@ -43,8 +45,9 @@ namespace UsingBroadcasts
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Main);
 
-			//myReceiver = new MyBroadcastReceiver();
+			// Initialize broadcast receiver
 			myReceiver = new MyBroadcastReceiver();
+			// When the IntentFilter match Intent, this IntentFilter will received this intent
 			intentFilter = new IntentFilter("MY_SPECIFIC_ACTION");
 
 			// Get our button from the layout resource,
@@ -54,6 +57,7 @@ namespace UsingBroadcasts
 			button.Click += delegate 
 			{
 				// Send broadcast
+				// Intent i specific delivery to "MY_SPECIFIC_ACTION"
 				Intent i = new Intent("MY_SPECIFIC_ACTION");
 				i.PutExtra("key", "some value from intent");
 
@@ -63,7 +67,15 @@ namespace UsingBroadcasts
 				// such broadcasts through permissions described below.Alternatively, starting
 				// with ICE_CREAM_SANDWICH, you can also safely restrict the broadcast to a single 
 				// application with Intent.setPackage
-				SendBroadcast(i);
+
+				// Normal Way to send broadcast:
+				// SendBroadcast(i);
+
+				// Special way to send broadcast:
+				// Allows broadcast to be aborted
+				// Allows receivers to set priority
+
+				SendOrderedBroadcast(i, null);
 			};
 		}
 

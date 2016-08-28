@@ -14,7 +14,7 @@ using Android.Widget;
 namespace UsingBroadcasts
 {
 	[BroadcastReceiver]
-	[IntentFilter(new[] {"MY_SPECIFIC_ACTION"})]
+	[IntentFilter(new[] {"MY_SPECIFIC_ACTION"}, Priority = 50)]
 
 	public class MySecondBroadcastReceiver : BroadcastReceiver
 	{
