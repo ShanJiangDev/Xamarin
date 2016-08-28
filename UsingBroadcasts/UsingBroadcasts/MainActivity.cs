@@ -13,14 +13,15 @@ namespace UsingBroadcasts
 	// https://developer.android.com/reference/android/content/BroadcastReceiver.html
 	// Base class for code that will receive intents sent by sendBroadcast().
 
-
-
-
-
-
-
-
-
+	public class MyBroadcastReceiver : BroadcastReceiver 
+	{
+		public override void OnReceive(Context context, Intent intent)
+		{
+			Toast.MakeText(context, "Received broadcast in MyBroadcastReceiver, value received: "
+						   + intent.GetStringExtra("key"), ToastLength.Long).Show();
+		}
+		
+	}
 
 	[Activity(Label = "UsingBroadcasts", MainLauncher = true, Icon = "@mipmap/icon")]
 	//[BroadcastReceiver(Enabled = true)]
@@ -96,22 +97,6 @@ namespace UsingBroadcasts
 			base.OnPause();
 			UnregisterReceiver(myReceiver);
 		}
-
-		class MyBroadcastReceiver : BroadcastReceiver
-		{
-			// Receive broadcast
-			public override void OnReceive(Context context, Intent i)
-			{
-				Toast.MakeText(context, "Received broadcast in MyBroadcastReceiver, value received: "
-						   + i.GetStringExtra("key"), ToastLength.Long).Show();
-
-				InvokeAbortBroadcast();
-		
-			}
-
-		}
-
-
 	}
 }
 
